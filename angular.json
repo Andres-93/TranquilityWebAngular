@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TranquilityWeb"
+    }
+  },
+  "defaultProject": "TranquilityWeb",
+  "cli": {
+    "analytics": false
+  }
 }
