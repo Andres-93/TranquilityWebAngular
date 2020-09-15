@@ -1,0 +1,15 @@
+nav{
+    font-size: 200% ;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+   
+  }
+
+  .fondoLogo{
+    background-color:#343a40;
+  }
