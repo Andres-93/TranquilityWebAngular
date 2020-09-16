@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {RaidersServiceService} from '../../services/raiders-service.service';
+
 @Component({
   selector: 'app-miembros',
   templateUrl: './miembros.component.html',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiembrosComponent implements OnInit {
 
-  constructor() { }
+  raiders:any[] = [];
+  constructor(private _raiderService : RaidersServiceService) { 
+  }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.raiders = this._raiderService.getRaiders();
+
   }
 
 }

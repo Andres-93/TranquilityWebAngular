@@ -1,19 +1,19 @@
 <p></p>
-<h1>Miembros</h1>
+<h1>Raiders</h1>
 <hr>
 
 <div class="card-columns">
-
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="../../../assets/img/iconoBrujo.png" alt="Card image cap">
+    <div class="card" *ngFor="let raider of raiders" style="width: 18rem;">
+        <img class="card-img-top" [src]=raider.img alt="Card image cap" >
         <div class="card-body">
-        <h5 class="card-title">Krosax</h5>
-        <p class="card-text">TEXTO DE MIERDA QUE NO SE QUE PONER</p>
+        <h5 class="card-title">{{raider.nombre}}</h5>
+        <p class="card-text">{{raider.descripcion}}</p>
         <h6>Roles</h6>
-        <img src="../../../assets/img/tankPNG.png" style="width:45px;height:45px;">
-        <img src="../../../assets/img/dpsPNG.png" style="width:45px;height:45px;"><hr>
-        <a target ="_blank" href="https://www.warcraftlogs.com/character/eu/dun-modr/krosax" class="btn btn-primary"style="margin-right:10px;">Warcraft Logs</a>
-        <a target ="_blank" href="https://raider.io/characters/eu/dun-modr/Krosax" class="btn btn-primary">Raider IO</a>
+        <img *ngIf="raider.tank == 1" src="../../../assets/img/tankPNG.png" style="width:45px;height:45px;">
+        <img *ngIf="raider.heal == 1" src="../../../assets/img/healPNG.png" style="width:45px;height:45px;">
+        <img *ngIf="raider.dps == 1" src="../../../assets/img/dpsPNG.png" style="width:45px;height:45px;"><hr>
+        <a target ="_blank" href="{{raider.log}}" class="btn btn-primary"style="margin-right:10px;">Warcraft Logs</a>
+        <a target ="_blank" href="{{raider.io}}" class="btn btn-primary">Raider IO</a>
         </div>
     </div>
 

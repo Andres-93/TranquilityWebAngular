@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MiembrosComponent } from './components/miembros/miembros.component';
 
+import {RaidersServiceService} from './services/raiders-service.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { MiembrosComponent } from './components/miembros/miembros.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [RaidersServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
